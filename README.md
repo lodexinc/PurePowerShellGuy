@@ -4,6 +4,9 @@ This repository contains sample scripts that are posted to https://purepowershel
 
 ### SAMPLE SCRIPTS
 * [Get-PfaConnections.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- WHAT VOLUME IS CONNECTED TO WHAT HOST? http://www.purepowershellguy.com/?p=10312
+* [New-TestMailboxSetup.ps1]
+* [New-FlashStackExchangeSetup.ps1]
+* [Get-ADMembers.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- RETRIEVING MEMBERS OF DIRECTORY SERVICES? http://www.purepowershellguy.com/?p=12121
 
 ### RELEASE COMPATIBILITY
 
