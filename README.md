@@ -7,6 +7,7 @@ This repository contains sample scripts that are posted to https://purepowershel
 * [New-TestMailboxSetup.ps1]
 * [New-FlashStackExchangeSetup.ps1]
 * [Get-ADMembers.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- RETRIEVING MEMBERS OF DIRECTORY SERVICES? http://www.purepowershellguy.com/?p=12121
+* [Get-DisconnectedVolumes.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-DisconnectedVolumes.ps1) -- FIND ALL DISCONNECTED VOLUMES http://www.purepowershellguy.com/?p=12201
 
 ### RELEASE COMPATIBILITY
 
