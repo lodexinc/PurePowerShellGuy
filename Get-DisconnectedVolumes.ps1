@@ -29,6 +29,9 @@ foreach($j in $AllVolumes) {
     }
 }
 
+Write-Host "==================================================="
+Write-Host "Disconnected Volumes ($($DisconnectedVolumes.Count) of $($hash.Count))"
+Write-Host "==================================================="
 $DisconnectedVolumes
 
 
