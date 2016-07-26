@@ -1,5 +1,5 @@
 ﻿$FlashArrayID = Read-Host -Prompt "Enter the Pure Storage FlashArray (IP/FQDN)" 
-$FlashArray = New-PfaArray -EndPoint 10.21.10.17 -Credentials (Get-Credential) -IgnoreCertificateError
+$FlashArray = New-PfaArray -EndPoint $FlashArrayID -Credentials (Get-Credential) -IgnoreCertificateError
 
 $ConnectedVolumes = @($null)
 $AllVolumes = @($null)
