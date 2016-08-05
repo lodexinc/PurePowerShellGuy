@@ -3,12 +3,14 @@
 This repository contains sample scripts that are posted to https://purepowershellguy.com.
 
 ### SAMPLE SCRIPTS
-* [Get-PfaConnections.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- WHAT VOLUME IS CONNECTED TO WHAT HOST? http://www.purepowershellguy.com/?p=10312
+* [Get-PfaConnections.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- Blog post: [What Volume is Connected to What Host?](http://www.purepowershellguy.com/?p=10312)
 * [New-TestMailboxSetup.ps1]
 * [New-FlashStackExchangeSetup.ps1]
-* [Get-ADMembers.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- RETRIEVING MEMBERS OF DIRECTORY SERVICES? http://www.purepowershellguy.com/?p=12121
-* [Get-DisconnectedVolumes.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-DisconnectedVolumes.ps1) -- FIND ALL DISCONNECTED VOLUMES http://www.purepowershellguy.com/?p=12201
-* [Get-GitHubRelDownloads.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-GitHubRelDownloads.ps1) -- GET GITHUB DOWNLOAD RELEASE METRICS http://www.purepowershellguy.com/?p=12271
+* [Show-VolumeSnapshotRelationship.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Show-VolumeSnapshotRelationship.ps1) -- Blog post: [Correlate a Volume to Source Snapshot](http://www.purepowershellguy.com/?p=11091)
+* [Get-ADMembers.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- Blog post: [Retrieving Members of Directory Service Configuration](http://www.purepowershellguy.com/?p=12121)
+* [Get-DisconnectedVolumes.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-DisconnectedVolumes.ps1) -- Blog post: [Find All Disconnected Volumes](http://www.purepowershellguy.com/?p=12201)
+* [Get-GitHubRelDownloads.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-GitHubRelDownloads.ps1) -- Blog post: [Get GitHub Download Release Metrics](http://www.purepowershellguy.com/?p=12271)
+* [Show-HierarchyVisualization.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Show-HierarchyVisualization.ps1) -- Blog post: [Create a Hierarchy Tree of Hosts, Volumes & Snapshots](http://www.purepowershellguy.com/?p=12401)
 
 ### RELEASE COMPATIBILITY
 
