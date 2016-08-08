@@ -11,6 +11,7 @@ This repository contains sample scripts that are posted to https://purepowershel
 * [Get-DisconnectedVolumes.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-DisconnectedVolumes.ps1) -- Blog post: [Find All Disconnected Volumes](http://www.purepowershellguy.com/?p=12201)
 * [Get-GitHubRelDownloads.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-GitHubRelDownloads.ps1) -- Blog post: [Get GitHub Download Release Metrics](http://www.purepowershellguy.com/?p=12271)
 * [Show-HierarchyVisualization.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Show-HierarchyVisualization.ps1) -- Blog post: [Create a Hierarchy Tree of Hosts, Volumes & Snapshots](http://www.purepowershellguy.com/?p=12401)
+* [Disable-DefragScheduledTasks.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Disable-DefragScheduledTask.ps1) -- Blog post: [Best Practice: Disable Disk Fragmentation Scheduled Task](http://www.purepowershellguy.com/?p=12471)
 
 ### RELEASE COMPATIBILITY
 
