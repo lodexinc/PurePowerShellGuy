@@ -1,81 +1,8 @@
-﻿Clear-Host
-$return = Read-Host -Prompt 'Enter the FQDN/IP to the Pure Storage FlashArray'
-$user = Read-Host -Prompt 'Username'
-$pwd = Read-Host -Prompt 'Password' -AsSecureString
-$pattern = Read-Host -Prompt 'Enter Snapshot pattern to destroy and eradicate (Eg. VSS-)'
-$timeframe = Read-Host -Prompt 'Enter Snapshot retention period in minutes (Eg. 2hr = 120)'
-
-$FlashArray = New-PfaArray -EndPoint $return -Username $user -Password $pwd -IgnoreCertificateError
-$Initiators = Get-PfaHosts -Array $FlashArray
-
-$destroy = @()
-
-Write-Host '============================'
-Write-Host "Hosts on $return"
-Write-Host '============================'
-
-# Determine current FlashArray time.
-$tempvol = [GUID]::NewGuid()
-New-PfaVolume -Array $FlashArray -VolumeName $tempvol -Unit M -Size 1 | Out-Null
-$array = Get-PfAvolume -Array $FlashArray -Name $tempvol
-Remove-PfaVolumeOrSnapshot -Array $FlashArray -Name $tempvol | Out-Null
-Remove-PfaVolumeOrSnapshot -Array $FlashArray -Name $tempvol -Eradicate | Out-Null
-
-ForEach ($Initiator in $Initiators)
+﻿If ((Get-ScheduledTask -TaskName 'ScheduledDefrag').State -eq 'Ready') 
 {
-  Write-Host "  [H] $($Initiator.name)"
-
-  $Volumes = Get-PfaHostVolumeConnections -Array $FlashArray -Name $Initiator.name
-  If (!$Volumes)
-  {
-    Write-Host '   |   |----[No volumes connected]'        
-  }
-  Else
-  {
-    ForEach ($Volume in $Volumes)
-    {
-      Write-Host "   |   |----[V] $($Volume.vol)"
-    
-      $Snapshots = Get-PfaVolumeSnapshots -Array $FlashArray -VolumeName $Volume.vol
-      ForEach ($Snapshot in $Snapshots)
-      {
-        If (($Snapshot.name) -like "*$pattern*")
-        {
-          # Based on US datetime format.
-          $TimeSpan = New-TimeSpan -Start ([datetime]$Snapshot.created) -End ([datetime]$array.created)
-          Write-Host ">  |   |       |----[$pattern] $($Snapshot.name)"
-          If($TimeSpan.Minutes -ge $timeframe)
-          {
-            $destroy += $Snapshot.name        
-          }
-        }
-        Else
-        {
-          Write-Host "   |   |       |----[S] $($Snapshot.name)"
-        }
-      }
-    }
-  }
+    Disable-ScheduledTask -TaskName 'ScheduledDefrag' -TaskPath '\Microsoft\Windows\Defrag'
 }
-
-$voldestroylist = @($null)
-ForEach ($vol in $destroy)
-{
-  $voldestroylist += "$vol`r`n"
-}
-$destroy_retval = Read-Host -Prompt "`r`n`r`nDo you want to DESTROY $($voldestroylist.Count) snapshot(s) [Y/N]?"
-If ($destroy_retval.ToUpper() -eq 'Y')
-{
-  ForEach ($voldestroy_item in $voldestroylist) 
-  {
-    #Only destroy volume. To add eradicate functionality add -Eradicate parameter.
-    #
-    #Uncomment below line for destroy to work.
-    #Remove-PfaVolumeOrSnapshot -Array $FlashArray -Name $voldestroy_item -ErrorAction SilentlyContinue | Out-Null
-  }
-}
-
-Disconnect-PfaArray -Array $FlashArray
+Get-ScheduledTask -TaskName 'ScheduledDefrag'
 
 # SIG # Begin signature block
 # MIINIQYJKoZIhvcNAQcCoIINEjCCDQ4CAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
