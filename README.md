@@ -4,8 +4,8 @@ This repository contains sample scripts that are posted to https://purepowershel
 
 ### SAMPLE SCRIPTS
 * [Get-PfaConnections.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- Blog post: [What Volume is Connected to What Host?](http://www.purepowershellguy.com/?p=10312)
-* [New-TestMailboxSetup.ps1]
-* [New-FlashStackExchangeSetup.ps1]
+* [New-TestMailboxSetup.ps1]() -- Blog post: []()
+* [New-FlashStackExchangeSetup.ps1]() -- Blog post: []()
 * [Show-VolumeSnapshotRelationship.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Show-VolumeSnapshotRelationship.ps1) -- Blog post: [Correlate a Volume to Source Snapshot](http://www.purepowershellguy.com/?p=11091)
 * [Get-ADMembers.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- Blog post: [Retrieving Members of Directory Service Configuration](http://www.purepowershellguy.com/?p=12121)
 * [Get-DisconnectedVolumes.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-DisconnectedVolumes.ps1) -- Blog post: [Find All Disconnected Volumes](http://www.purepowershellguy.com/?p=12201)
