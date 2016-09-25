@@ -3,6 +3,7 @@
 This repository contains sample scripts that are posted to https://purepowershellguy.com.
 
 ### SAMPLE SCRIPTS
+* [Get-PfaRASession.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaRASession.ps1) -- Blog post: [Checking for Active Remote Assist Session](http://www.purepowershellguy.com/?p=10312)
 * [Get-PfaConnections.ps1](https://github.com/barkz/PurePowerShellGuy/blob/master/Get-PfaConnections.ps1) -- Blog post: [What Volume is Connected to What Host?](http://www.purepowershellguy.com/?p=10312)
 * [New-TestMailboxSetup.ps1]() -- Blog post: []()
 * [New-FlashStackExchangeSetup.ps1]() -- Blog post: []()
